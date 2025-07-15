@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="Nathan Awuku Amoako">
-    <meta name="keywords" content="Computer Science, ISU">  
+    <meta name="keywords" content="Computer Science, Graduate Student, Nathan Awuku Amoako">  
     <title>Nathan Awuku Amoako | Portfolio</title>
     <link rel="icon" type="image/x-icon" href="images/nathan-logo.jpeg">
     <link rel="stylesheet" href="css/nathan_home.css">
@@ -14,7 +14,7 @@
 <body>
     <header>
         <div>
-            <a href="nathan.html"><img class="logo" src="images/nathan-logo.png" alt="Nathan Awuku Amoako"></a>
+            <a href="index.html"><img class="logo" src="images/nathan-logo.png" alt="Nathan Awuku Amoako"></a>
             
         </div>
         <a href="javascript:void(0);" class="icon main-menu" onclick="toggleMenu()" > <i class="fa fa-bars"></i></a>
@@ -26,19 +26,69 @@
             
         </menu>
     </header>
-    <section>
+    <section id="top" onclick="closeMenu()">
         <p> <div class="container"><img class="img" src="images/profilephoto.jpg" alt="Nathan Awuku Amoako">
-             <div class="mid">
-                 <div class="txt">Nice 3 piece suit, right? <br>Yeah, it was a gift from my dad. <br>I love my dad and my mum.</div>
-             </div>
-             
-         </div></p>
-        <p>
-            <a class="midfont"style="text-decoration: none;"href="about.html"> <span  class="biography" alt="About">Biography</a></span><br> <span class="largefont">Nathan Awuku Amoako</span>
-            <br>
-            <a class="midfont">Graduate Student at Indiana State University</a></p>            
+        <div class="mid">
+            <div class="txt">Nice 3 piece suit, right? <br>Yeah, it was a gift from my dad. <br>I love my dad and my mum.</div>
+        </div>
+        
+    </div></p>
+    <p>
+        <a class="midfont"style="text-decoration: none;"href="about.html"> <span  class="biography" alt="About">Biography</a></span><br><span class="largefont">Nathan Awuku Amoako</span>
+        <br>
+        <a class="midfont">Graduate Student at Indiana State University</a></p>            
+        
+    </section>
+    <main onclick="closeMenu()">
+        <h2>What I do</h2>
+        <div id="shape"><p><span class="circle"><i class="fa fa-code"></i> </span><br><br><br><br><b>Web Developer</b><br><p>With strong HTML/CSS and JavaScript skills. I currently serve as the website manager for the Bayh College of Education in ISU.</p></p></div>
+        <div id="shape"><p><span class="circle"><i class="fa fa-graduation-cap"></i> </span><br><br><br><br><b>Graduate Student</b><br><p>Computer Science Master's student with interests in machine learning, artificial intelligence, voice recognition and software development.</p></p></div>
+        <div id="shape"><p><span class="circle"><i class="fa fa-wrench"></i> </span><br><br><br><br><b>IT Support</b><br><p>Highly skilled Information Technology and Audio Visual technology specialist with over 6 years of freelance experience.</p></p></div>
+    </main>
+    
+    
+    
+    
+    <article id="myprojects" onclick="closeMenu()">    
+        
+    <h2> Projects I've Worked On</h2>
+    
+    <div class="slideshow-container">
+        
+        <div class="mySlides fade">
+            <div class="numbertext">1 / 5</div>
+            <a href="documents/AuthorKnn.html" target="_blank"><iframe src="documents/AuthorKnn.html" scrolling="no" ></iframe>
+            <div class="text"><h3>Author Prediction</h3>Predicting the author of a written work...<br><br>(Click to view <i class="fa fa-external-link"></i>)</div></a>
+        </div>
+        
+        <div class="mySlides fade">
+            <div class="numbertext">2 / 5</div>
+            <a href="documents/SalesAnalysis.html" target="_blank"><iframe src="documents/SalesAnalysis.html" scrolling="no"></iframe>
+            <div class="text"><h3>Sales Analysis</h3>Sales analysis using 12 months of business data...<br><br>(Click to view <i class="fa fa-external-link"></i>)</div></a>
+        </div>
+        
+        <div class="mySlides fade">
+            <div class="numbertext">3 / 5</div>
+            <a href="documents/LinearRegression.html" target="_blank"><iframe src="documents/LinearRegression.html" scrolling="no"></iframe>
+            <div class="text"><h3>Linear Regression</h3>Relationship between human height and weight...<br><br>(Click to view <i class="fa fa-external-link"></i>)</div></a>
+        </div>
+        
+        <div class="mySlides fade">
+            <div class="numbertext">4 / 5</div>
+            <a href="https://cs.indstate.edu/~cs60900/rage/rage.html" target="_blank"><iframe src="https://cs.indstate.edu/~cs60900/rage/rage.html" scrolling="no"></iframe>
+                <div class="text"><h3>Rage Game</h3>Obstacle game developed with JavaScript language...<br><br>(Click to view <i class="fa fa-external-link"></i>)</div></a>
+            </div>
             
-        </section>
+            <div class="mySlides fade">
+                <div class="numbertext">5 / 5</div>
+                <a href="https://cs.indstate.edu/~cs60900/plain/plainsocial.html" target="_blank"><iframe src="https://cs.indstate.edu/~cs60900/plain/plainsocial.html" scrolling="no"></iframe>
+                    <div class="text"><h3>Plain Social Media</h3>Interactive social media platform...<br><br>(Click to view <i class="fa fa-external-link"></i>)</div></a>
+                </div>
+                
+                <a class="prev" onclick="plusSlides(-1)"><i class="fa fa-chevron-left"></i></a>
+                <a class="next" onclick="plusSlides(1)"><i class="fa fa-chevron-right"></i></a>
+                
+            </div>
         <main>
                 <h2>What I do</h2>
                     
