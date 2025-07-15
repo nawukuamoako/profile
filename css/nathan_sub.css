@@ -1,11 +1,21 @@
 :root{
     --white-background:white;
+    --white: white;
     --light-purple: rgb(115, 95, 169);
+    --purple-text: rgb(115, 95, 169);
     --purple-white: rgb(219, 213, 234);
     --dark-purple:rgb(68, 55, 103);
-    --standout:#7fffd4; 
+    --dark-purple-text:rgb(68, 55, 103);
+    --standout:rgb(220, 164, 52); 
     --blck: rgb(52, 52, 52);
+    --shadow:rgb(0, 0, 0, 0.2); 
+    
 }
+
+html{
+    scroll-behavior: smooth;
+}
+
 body{
     all:unset;
     background-color: var(--white-background);
@@ -20,15 +30,16 @@ body{
     "main main main sidebar"
     "footer footer footer footer";
     margin: 0%;
+    font-family: 'Georgia';
 }
-header{
 
-    background-color: var(--white-background);
+header{
+    background-color: var(--dark-purple);
     display: grid;
     gap: .5rem;
     grid-template-columns: repeat(5,1fr);
-    font-size: 1.5rem;
-    border-bottom: 1px solid var(--light-purple);
+    font-size: 1rem;
+    box-shadow: 0px 2px  2px rgb(69, 69, 69);
     grid-area: header;
     text-align: left;
     position: sticky;
@@ -48,28 +59,31 @@ header p a{
 
 menu{
     display: flex;
-    flex-grow: 1;
+    flex-grow: 2;
     padding: 0;
-    margin: 20;
+    margin-right: 20px;
     grid-column: 5;
 }
-
 menu li{
     list-style-type: none;
     width:100%;
     height: 100%;
     text-decoration: none;
+    margin: 0 5px 0 5px;
+    align-content: center;
 }
 
 menu li a:link{
-    color: var(--light-purple);
+    color: var(--dark-purple);
+    background-color: var(--white);
     text-decoration: none;
-    padding:25px;
+    padding:10px;
+    margin-left: 5px;
 }
 
 menu li a:hover{
-    color: var(--purple-white);
-    background-color: var(--dark-purple);
+    color: var(--dark-purple-text);
+    background-color: var(--standout);
 }
 
 .main-menu.icon{
@@ -77,17 +91,16 @@ menu li a:hover{
     text-align: right;
     margin-right: 1rem;
     line-height: 75px;
-    color: var(--light-purple);
+    color: var(--purple-white);
     grid-column: 5;
 }
 
 .logo{
-    margin-top: 1.4rem;
-    margin-left: 0.8rem;
-    margin-bottom: 0.8rem;
+    margin: 0.8rem;
     height: 2.2rem;
     display: block;
     pointer-events: none;
+    color: var(--white);
 }
 
 .top-nav{
@@ -100,10 +113,11 @@ menu li a:hover{
 .top-nav li{
     list-style-type: none;
     width: 100%;
+    height: 100%;
     border-top: 0;
     border-bottom: 0;
-
 }
+
 .top-nav li a{
     display: block;
     width: 100%;
@@ -111,28 +125,21 @@ menu li a:hover{
 }
 
 h1 {
-    margin:1rem;
-    font-family: 'Gill Sans MT';
     font-size: 3rem;
-    color: var(--light-purple);
+    color: var(--purple-text);
 }
 
 h2 {
-    margin:1rem;
-    font-family: 'Gill Sans';
+    margin: 1rem;
     font-size: 2rem;
-    color: var(--light-purple);
-    
+    color: var(--purple-text);
 }
 
 p{
-    margin:1rem;
-    text-align: justify;
-    font-family: 'Franklin Gothic Medium';
+    margin:0.5rem;
     font-size: 1.2rem;
-    color: var(--blck);
+    color: var(--white);
 }
-
 
 .container{
     position: relative;
@@ -140,23 +147,14 @@ p{
     border-radius: 50%;
 }
 
-.largefont{
-    font-family: 'Gill Sans MT';
-    font-size: 5rem;
-    color: white;
-    font-weight: bold;
-}
-
-.midfont{
-    font-family: 'Gill Sans MT';
-    font-size: 2rem;
-    color: white;
-}
-
 main{
     margin: 20px;
     font-size: 1.5rem;
     grid-area: main;
+}
+
+main p{
+    color: var(--blck);
 }
 
 main a:link{
@@ -176,7 +174,6 @@ aside.sidebar{
     position: -webkit-sticky;
     top: 0;
 }
-
 
 .card{
     margin: 0;
@@ -209,16 +206,15 @@ aside .card p{
     align-items: center;
 }
 
-
 footer{
     grid-area: footer;
     background-color: var(--dark-purple);
-    width: auto;
     padding: 15px 10px;
-    color: var(--white-background);
-    font-size: 0.8rem;
-    margin: 0;
+    color: var(--white);
+    font-size: 15px;
+    margin: auto;
     text-align: center;
+    width: max-content;
 }
 
 
@@ -226,10 +222,18 @@ footer a:link{
     text-decoration: none;
 }
 
+footer a{
+    color: var(--white);
+    position: absolute;
+    right: 10px;
+}
+footer br{
+    display: none;
+}
 
 .collapsed {
     background-color:var(--light-purple);
-    color: var(--white-background);
+    color: var(--white);
     cursor: pointer;
     padding: 18px;
     border-radius: 10px;
@@ -251,7 +255,7 @@ footer a:link{
   
   .collapsed:after {
     content: '\002B';
-    color: var(--white-background);
+    color: var(--white);
     font-weight: bold;
     float: right;
     margin-left: 5px;
@@ -268,6 +272,7 @@ footer a:link{
       transition: max-height 0.2s ease-out;
       background-color: var(--purple-white);
       font-size: 20px;
+      color: var(--blck);
 
     }
     
@@ -286,33 +291,52 @@ footer a:link{
     .main-menu.icon{
         display:block;
     }
+
     #nav-menu{
         display:none;
     }
+
     .column {
         width: 100%;
     }
+
     menu{
         grid-row:2;
-        grid-column: span 5;
         flex-direction:column;
+        grid-column: span 5;
+        text-align: center;
         width: 100%;
+        height: 100%;
+        margin-right: 0px;
         background-color: var(--purple-white);
-        /* padding-right: 100%; */
     }
+    
     menu li a:link{
-        padding-top:2px;
-        padding-bottom:2px;
-        padding-right: 40%;
-        padding-left: 40%;
+        width: 100%;
+        height: min-content ;
+        margin: 0px;
+        display: block;
+        align-content: center;
+
     }
-    menu li a:hover{
-        transition: 0.4s;
-        letter-spacing: 3px;
+
+    menu li{
+        height: 100%;
+        margin: 0%;
+        align-content: center;
+        background-color: var(--white-background);
     }
     
     aside.sidebar{
         padding-top: 0px;
+        position: relative;
+    }
+    footer br{
+        display: block;
+    }
+
+    footer a{
+        position: relative;
     }
 }
  
